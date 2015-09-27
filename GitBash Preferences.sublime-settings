@@ -4,9 +4,9 @@
 //
 
 {
-	// LaTeXDaemon path
+	// GitBash path
+	"gitbash_path":	"C:\\Program Files\\Git\\git-bash.exe"
 	// "gitbash_path":	"sh.exe", // if already in path
 	// "gitbash_path":	"C:\\Program Files\\Git\\bin\\sh.exe",
 	// "gitbash_parameters":	["--login", "-i"] // parameters for sh
-	"gitbash_path":	"C:\\Program Files\\Git\\git-bash.exe"
 }
