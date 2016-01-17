@@ -16,8 +16,9 @@ class GitBashHereCommand(sublime_plugin.WindowCommand):
     if not folder_name:
       print 'Can\'t run GitBash : missing folder.'
       return
+    print u"Starting "+gitbash_path+" "+(" ".join(gitbash_parameters))+" in folder "+folder_name+" ..."
+    # folder_name is unicode => system encoding ("mbcs" for windows)
     folder_name = folder_name.encode(sys.getfilesystemencoding())
-    print "Starting "+gitbash_path+" "+(" ".join(gitbash_parameters))+" in folder "+folder_name+" ..."
     subprocess.Popen(gitbash_path+" "+(" ".join(gitbash_parameters)), cwd=folder_name)
     # The following works only with gitbash_path="sh" :
     # self.window.run_command("exec", {"cmd": ["start", gitbash_path]+gitbash_parameters, "shell": True, "working_dir": folder_name})
