@@ -12,10 +12,10 @@ class GitBashHereCommand(sublime_plugin.WindowCommand):
       print("The \"gitbash_parameters\" must be an array of strings")
       return
     view = self.window.active_view()
-    folder_name = os.path.dirname(view.file_name())
-    if not folder_name:
+    if not view.file_name() or not os.path.dirname(view.file_name()):
       print('Can\'t run GitBash : missing folder.')
       return
+    folder_name = os.path.dirname(view.file_name())
     print(u"Starting "+gitbash_path+" "+(" ".join(gitbash_parameters))+" in folder "+folder_name+" ...")
     # folder_name is unicode => system encoding ("mbcs" for windows)
     if (not (type(folder_name) is str)):
