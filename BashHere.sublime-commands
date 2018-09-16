@@ -1,4 +1,6 @@
 [
+  { "caption": "CMD: run in this folder", "command": "bash_here", "args" : {"path" : "cmd"}},
+  { "caption": "Powershell: run in this folder", "command": "bash_here", "args" : {"path" : "powershell"}},
   { "caption": "WSL Bash: run in this folder", "command": "bash_here", "args" : {"path" : "bash.exe"}},
   { "caption": "Git Bash: run in this folder", "command": "bash_here", "args" : {"path" : "C:\\Program Files\\Git\\git-bash.exe"}},
 	// { "caption": "sh: run in this folder", "command": "bash_here", "args" : {"path" : "sh.exe", "parameters": ["--login", "-i"]}},
